@@ -86,7 +86,7 @@ import BoardList from '@/components/member/myPage/BoardList';
 import CommentList from '@/components/member/myPage/CommentList';
 import BoardSaveList from '@/components/member/myPage/BoardSaveList';
 import BoardLikeList from '@/components/member/myPage/BoardLikeList';
-import '@/components_css/member/mypage/MyPage.css';
+import '@/components_css/member/myPage/MyPage.css';
 
 const tabTitles = {
   profile: '내 정보 수정',
