@@ -39,6 +39,7 @@ export default defineConfig({
       "@": "/src",
     },
   },
+  base: '/',
   server: {
     // https: true,
     proxy: {
