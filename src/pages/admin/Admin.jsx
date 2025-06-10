@@ -3,11 +3,11 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Container    from "@/layouts/container/Container.jsx";
 import AdminLogin   from "@/components/admin/sign/AdminLogin.jsx";
-import AdminPage    from "@/components/admin/adminpage/AdminPage.jsx";
-import Dashboard    from "@/components/admin/adminpage/Dashboard.jsx";
-import MemberList   from "@/components/admin/adminpage/MemberList.jsx";
-import BoardList    from "@/components/admin/adminpage/BoardList.jsx";
-import CommentList  from "@/components/admin/adminpage/CommentList.jsx";
+import AdminPage    from "@/components/admin/adminPage/AdminPage.jsx";
+import Dashboard    from "@/components/admin/adminPage/Dashboard.jsx";
+import MemberList   from "@/components/admin/adminPage/MemberList.jsx";
+import BoardList    from "@/components/admin/adminPage/BoardList.jsx";
+import CommentList  from "@/components/admin/adminPage/CommentList.jsx";
 
 const Admin = () => (
   <Routes>
