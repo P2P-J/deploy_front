@@ -1,0 +1,138 @@
+/* MyPage.css */
+/* 1. 전역 box-sizing */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+/* 2. CSS 변수 */
+:root {
+  --accent:         #95D5F5;
+  --accent-hover:   #6fb8e8;
+  --text-dark:      #333;
+  --panel-bg:       #fff;
+  --panel-border:   #e0e0e0;
+  --panel-shadow:   rgba(0,0,0,0.05);
+  --radius:         8px;
+  --gap-lg:         2rem;
+  --gap:            1.5rem;
+}
+
+/* 3. 마이페이지 래퍼 */
+.mypage-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: var(--gap-lg);
+  background: var(--panel-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px var(--panel-shadow);
+}
+
+/* 4. 탭 네비 */
+.mypage-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  margin-bottom: var(--gap-lg);
+  border-bottom: 1px solid var(--panel-border);
+}
+.mypage-tabs button {
+  background: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.mypage-tabs button:hover { color: var(--accent-hover); }
+.mypage-tabs button.active { color: var(--accent); border-color: var(--accent); }
+
+/* 5. 콘텐츠 중앙 정렬 */
+.mypage-content { display: flex; justify-content: center; }
+
+/* 6. 카드 섹션 */
+.section-card {
+  width: 100%;
+  max-width: 700px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 4px var(--panel-shadow);
+}
+.section-card-title {
+  padding: var(--gap);
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--panel-border);
+}
+.section-card-body {
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* 7. 입력폼 통일: 레이블-필드 완전 분리 */
+.section-card-body label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.section-card-body .form-group,
+.section-card-body .profile-edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: var(--gap);
+}
+.section-card-body input,
+.section-card-body select,
+.section-card-body textarea,
+.section-card-body .form-control {
+  width: 100% !important;
+  max-width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* 8. 버튼 스타일 */
+.btn,
+button[type="submit"],
+.cancelAccount-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn,
+button[type="submit"] {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+}
+.btn:hover,
+button[type="submit"]:hover {
+  background: var(--accent-hover);
+}
+
+/* 9. 회원 탈퇴 버튼 */
+.cancelAccount-btn {
+  margin-left: auto;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+}
+.cancelAccount-btn:hover { background-color: #c0392b; }
+
+/* 10. 반응형 */
+@media (max-width: 600px) {
+  .mypage-container { padding: var(--gap); }
+  .mypage-tabs { justify-content: space-between; }
+}

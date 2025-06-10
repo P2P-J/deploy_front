@@ -1,0 +1,114 @@
+/* ──── 공통 변수 설정 ──── */
+:root {
+  --bg-white:        #ffffff;
+  --bg-light:        #f9fafb;
+  --bg-hover:        #eef4ff;
+  --border-light:    #e5e7eb;
+  --border-gray:     #d1d5db;
+  --text-dark:       #1f2937;
+  --text-muted:      #6b7280;
+  --accent:          #3b82f6;
+  --accent-dark:     #2563eb;
+  --box-shadow:      rgba(0, 0, 0, 0.05);
+  --radius:          8px;
+  --gap:             1rem;
+}
+
+/* ──── 전체 흰색 박스 컨테이너 ──── */
+.RecentListContainer {
+  background: var(--bg-white);
+  border: 1px solid var(--border-gray);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  width: 100%;
+  margin: 0 auto 2rem;
+  box-shadow: 0 2px 8px var(--box-shadow);
+  box-sizing: border-box;
+}
+
+/* ──── 헤더: 제목 + 전체보기 버튼 ──── */
+.RecentListHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.RecentListTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.RecentListButton {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.RecentListButton:hover {
+  background: var(--accent-dark);
+}
+
+/* ──── 리스트 그리드 ──── */
+.RecentListList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--gap);
+}
+
+/* ──── 개별 항목 카드 ──── */
+.RecentListItem {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 1px 4px var(--box-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.RecentListItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px var(--box-shadow);
+  background: var(--bg-hover);
+}
+
+/* ──── 제목 ──── */
+.newPostTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ──── 메타 정보 ──── */
+.newPostInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.newPostUserViews {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.newPostUserViews span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}

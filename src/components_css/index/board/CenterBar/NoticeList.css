@@ -1,0 +1,111 @@
+/* ──── 공통 변수 ──── */
+:root {
+  --bg-white:      #ffffff;
+  --bg-light:      #f9fafb;
+  --bg-hover:      #eef4ff;
+  --border-gray:   #d1d5db;
+  --text-dark:     #1f2937;
+  --text-muted:    #6b7280;
+  --accent:        #3b82f6;
+  --accent-dark:   #2563eb;
+  --box-shadow:    rgba(0, 0, 0, 0.05);
+  --radius:        8px;
+  --gap:           1rem;
+}
+
+/* ──── 전체 흰색 박스 컨테이너 ──── */
+.NoticeListContainer {
+  background: var(--bg-white);
+  border: 1px solid var(--border-gray);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px var(--box-shadow);
+  padding: 1.5rem;
+  width: 100%;            /* 가로 꽉 채움 */
+  max-width: none;        /* 제한 해제 */
+  margin: 0 auto 2rem;
+  box-sizing: border-box;
+}
+
+/* ──── 헤더 ──── */
+.NoticeListHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--gap);
+}
+.NoticeListTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+.NoticeListMoreBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.NoticeListMoreBtn:hover {
+  background: var(--accent-dark);
+}
+
+/* ──── 리스트 (한 줄로 세로 정렬) ──── */
+.NoticeListGrid {
+  display: flex;
+  flex-direction: column; /* 리스트 아이템을 세로로 쌓기 */
+  gap: var(--gap);
+}
+
+/* ──── 개별 항목 (가로 꽉 채움) ──── */
+.NoticeListCard {
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 1px 4px var(--box-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;            /* 가로 꽉 채우기 */
+  box-sizing: border-box;
+}
+.NoticeListCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px var(--box-shadow);
+  background: var(--bg-hover);
+}
+
+/* ──── 카드 내 날짜/조회수 등 (더 넉넉하게) ──── */
+.NoticeListInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;       /* 조금 키움 */
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+}
+
+/* ──── 제목 중앙 정렬 ──── */
+.NoticeListTitleText {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ──── 이미지 꺼낼 경우 ──── */
+.NoticeListImage {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+}
