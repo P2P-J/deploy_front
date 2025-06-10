@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "@/auth/AxiosConfig";
-import Dashboard   from "@/components/admin/adminpage/Dashboard";
-import MemberList  from "@/components/admin/adminpage/MemberList";
-import BoardList   from "@/components/admin/adminpage/BoardList";
-import CommentList from "@/components/admin/adminpage/CommentList";
-import "@/components_css/admin/adminpage/AdminPage.css";
+import Dashboard   from "@/components/admin/adminPage/Dashboard";
+import MemberList  from "@/components/admin/adminPage/MemberList";
+import BoardList   from "@/components/admin/adminPage/BoardList";
+import CommentList from "@/components/admin/adminPage/CommentList";
+import "@/components_css/admin/adminPage/AdminPage.css";
 
 export default function AdminPage() {
   const [activeTab, setActiveTab] = useState("dashboard");
