@@ -8,7 +8,7 @@ export default function BoardLikeList() {
 
     useEffect(() => {
         axios
-        .get("http://localhost:8080/api/board/my/liked", { withCredentials: true })
+        .get("http://13.124.41.118:8080/api/board/my/liked", { withCredentials: true })
         .then((res) => setLikedBoards(res.data))
         .catch((err) => console.error("좋아요 글 로딩 실패:", err));
     }, []);

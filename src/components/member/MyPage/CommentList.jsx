@@ -7,7 +7,7 @@ export default function CommentList() {
 
     useEffect(() => {
         axios
-        .get("http://localhost:8080/api/comments/my", { withCredentials: true })
+        .get("http://13.124.41.118:8080/api/comments/my", { withCredentials: true })
         .then((res) => setMyComments(res.data))
         .catch((err) => console.error("댓글 로딩 실패:", err));
     }, []);

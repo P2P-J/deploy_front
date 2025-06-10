@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "HTTPS=true react-scripts start",
-    "build": "react-scripts build"
+    "build": "vite build"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^41.4.2",

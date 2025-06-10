@@ -7,7 +7,7 @@ import "@/components_css/comment/CommentSection.css";
 
 /* --- axios 전역 설정: 쿠키 항상 포함 & 기본 URL --- */
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "http://localhost:8080";
+axios.defaults.baseURL = "http://13.124.41.118:8080";
 
 export default function CommentSection({ boardId }) {
   const [comments,    setComments]    = useState([]);

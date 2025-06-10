@@ -9,7 +9,7 @@ export default function RecentList() {
 
   const fetchLatestPosts = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/board/list"); // 수정된 API 경로
+      const response = await axios.get("http://13.124.41.118:8080/api/board/list"); // 수정된 API 경로
       const sorted = response.data
         .sort((a, b) => new Date(b.boardRegdate) - new Date(a.boardRegdate)) 
         .slice(0, 10); // 최신 10개

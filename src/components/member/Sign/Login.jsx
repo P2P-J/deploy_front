@@ -16,7 +16,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/member/login",
+        "http://13.124.41.118:8080/api/member/login",
         {
           userEmail,
           password,
@@ -38,7 +38,7 @@ export default function Login() {
       if (response.status === 200) {
         alert("로그인 성공!");
         // 리다이렉트는 프론트엔드에서 처리
-        window.location.href = "http://localhost:5173/";
+        window.location.href = "http://13.124.41.118:5173/";
       }
     } catch (error) {
       console.error(

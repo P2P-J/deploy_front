@@ -11,7 +11,7 @@ const NaverCallback = () => {
 
     if (code) {
       axios
-        .post("http://localhost:8080/api/naver/login", { code })
+        .post("http://13.124.41.118:8080/api/naver/login", { code })
         // .then((res) => {
         .then(() => {
           //   console.log("네이버 로그인 성공!", res.data);

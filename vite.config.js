@@ -16,7 +16,7 @@ import react from '@vitejs/plugin-react'
 //   server: {
 //     proxy: {
 //       "/auth": {
-//         target: "http://localhost:8080",
+//         target: "http://13.124.41.118:8080",
 //         changeOrigin: true,
 //         secure: false,
 //         credentials: "include",
@@ -33,6 +33,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  
   resolve: {
     alias: {
       "@": "/src",
@@ -42,8 +43,8 @@ export default defineConfig({
     // https: true,
     proxy: {
       "/api": {
-        target: "http://localhost:8080", // http일때
-        // target: "http://localhost:7070", // https일때
+        target: "http://13.124.41.118:8080", // http일때
+        // target: "http://13.124.41.118:7070", // https일때
         changeOrigin: true,
         // 원래 secure가 true가 맞긴 한데 지금 개발중이니까 우선 fasle로 해봄 
         secure: false, // HTTP: secure false인 경우

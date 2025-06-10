@@ -9,7 +9,7 @@ export default function NoticeList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/board/list")
+      .get("http://13.124.41.118:8080/api/board/list")
       .then((response) => {
         console.log("전체 게시글 데이터:", response.data); // 확인용
         const noticePosts = response.data

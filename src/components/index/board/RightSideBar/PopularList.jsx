@@ -10,7 +10,7 @@ export default function PopularList() {
   // useEffect(() => {
   //   const fetchPopularList = async () => {
   //     try {
-  //       const response = await axios.get("http://localhost:8080/api/board"); // 백엔드 API 호출
+  //       const response = await axios.get("http://13.124.41.118:8080/api/board"); // 백엔드 API 호출
   //       const sortedByRecommend = response.data
   //         .sort((a, b) => (b.board_recommend || 0) - (a.board_recommend || 0)) // 추천 수 기준 정렬
   //         .slice(0, 10); // 상위 10개만
@@ -26,7 +26,7 @@ export default function PopularList() {
     const fetchPopularList = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/board/popular"
+          "http://13.124.41.118:8080/api/board/popular"
         );
         setPosts(response.data);
       } catch (err) {

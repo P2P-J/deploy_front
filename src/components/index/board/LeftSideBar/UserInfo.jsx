@@ -26,10 +26,10 @@ export default function UserInfo({ postTrigger, commentTrigger }) {
   const fetchInitialCounts = async (userId) => {
     try {
       const [postRes, commentRes] = await Promise.all([
-        axios.get("http://localhost:8080/api/board/my", {
+        axios.get("http://13.124.41.118:8080/api/board/my", {
           withCredentials: true,
         }),
-        axios.get("http://localhost:8080/api/comments/my", {
+        axios.get("http://13.124.41.118:8080/api/comments/my", {
           withCredentials: true,
         }),
       ]);
@@ -47,7 +47,7 @@ export default function UserInfo({ postTrigger, commentTrigger }) {
   useEffect(() => {
     if (!userInfo) return;
     axios
-      .get("http://localhost:8080/api/board/my", { withCredentials: true })
+      .get("http://13.124.41.118:8080/api/board/my", { withCredentials: true })
       .then((res) => {
         const posts = res.data.filter((p) => p.userId === userInfo.userId);
         setPostCount(posts.length);
@@ -59,7 +59,7 @@ export default function UserInfo({ postTrigger, commentTrigger }) {
   useEffect(() => {
     if (!userInfo) return;
     axios
-      .get("http://localhost:8080/api/comments/my", { withCredentials: true })
+      .get("http://13.124.41.118:8080/api/comments/my", { withCredentials: true })
       .then((res) => {
         const comments = res.data.filter((c) => c.userId === userInfo.userId);
         setCommentCount(comments.length);
@@ -102,7 +102,7 @@ export default function UserInfo({ postTrigger, commentTrigger }) {
   //   ? encodeURI(userInfo.sysUser)
   //   : defaultProfileImage;
   const profileImageUrl = userInfo.sysUser
-    ? `http://localhost:8080${encodeURI(userInfo.sysUser)}`
+    ? `http://13.124.41.118:8080${encodeURI(userInfo.sysUser)}`
     : "/usericon.png";
 
   const userName = userInfo.userName || userInfo.usersName;

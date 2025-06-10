@@ -17,8 +17,8 @@
 //     setLoading(true);
 
 //     axios
-//       // .get("http://localhost:8080/api/board-with-image") // ✅ 백엔드 API
-//       .get("http://localhost:8080/api/board/list")
+//       // .get("http://13.124.41.118:8080/api/board-with-image") // ✅ 백엔드 API
+//       .get("http://13.124.41.118:8080/api/board/list")
 //       .then((response) => {
 //         let fetchedPosts = response.data;
 
@@ -146,7 +146,7 @@ const BoardList = ({ boardType, sortType }) => {
     setLoading(true);
 
     axios
-      .get("http://localhost:8080/api/board/list")
+      .get("http://13.124.41.118:8080/api/board/list")
       .then((response) => {
         let fetchedPosts = response.data;
 
@@ -276,7 +276,7 @@ const BoardList = ({ boardType, sortType }) => {
     setLoading(true);
 
     axios
-      .get("http://localhost:8080/api/board/list")
+      .get("http://13.124.41.118:8080/api/board/list")
       .then((response) => {
         let fetchedPosts = response.data;
 

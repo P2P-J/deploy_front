@@ -12,7 +12,7 @@ const BoardDetail = () => {
 
   useEffect(() => {
     axios
-      .get(http://localhost:8080/api/board/detail/${boardId})
+      .get(http://13.124.41.118:8080/api/board/detail/${boardId})
       .then((res) => {
         console.log("📦 응답 데이터:", res.data); // ← 이거 추가
         // setBoard(res.data.board);
@@ -78,7 +78,7 @@ const BoardDetail = () => {
   useEffect(() => {
     // 게시글 정보
     axios
-      .get(`http://localhost:8080/api/board/detail/${boardId}`)
+      .get(`http://13.124.41.118:8080/api/board/detail/${boardId}`)
       .then((res) => {
         setBoard(res.data);
         setPics(/*res.data.pics || []*/res.data.boardPics || []);
@@ -87,13 +87,13 @@ const BoardDetail = () => {
 
     // 로그인한 사용자 정보 + 좋아요 여부
     axios
-      .get(`http://localhost:8080/api/member/me`, { withCredentials: true })
+      .get(`http://13.124.41.118:8080/api/member/me`, { withCredentials: true })
       .then((res) => {
         setCurrentUser(res.data);
 
         // ⭐ 좋아요 상태 가져오기
         axios
-          .get(`http://localhost:8080/api/board/${boardId}/liked`, {
+          .get(`http://13.124.41.118:8080/api/board/${boardId}/liked`, {
             withCredentials: true,
           })
           .then((res) => {
@@ -105,7 +105,7 @@ const BoardDetail = () => {
 
         //저장상태
         axios
-          .get(`http://localhost:8080/api/board/${boardId}/saved`, {
+          .get(`http://13.124.41.118:8080/api/board/${boardId}/saved`, {
             withCredentials: true,
           })
           .then((res) => {
@@ -161,7 +161,7 @@ const BoardDetail = () => {
   // const handleLike = async () => {
   //   try {
   //     const res = await axios.post(
-  //       http://localhost:8080/api/board/${boardId}/like,
+  //       http://13.124.41.118:8080/api/board/${boardId}/like,
   //       {},
   //       { withCredentials: true }
   //     );
@@ -179,7 +179,7 @@ const BoardDetail = () => {
     }
 
     axios
-      .post(`http://localhost:8080/api/board/${boardId}/like`, null, {
+      .post(`http://13.124.41.118:8080/api/board/${boardId}/like`, null, {
         withCredentials: true,
       })
       .then((res) => {
@@ -197,7 +197,7 @@ const BoardDetail = () => {
   //   }
 
   //   axios
-  //     .post(`http://localhost:8080/api/board/${boardId}/save`, null, {
+  //     .post(`http://13.124.41.118:8080/api/board/${boardId}/save`, null, {
   //       withCredentials: true,
   //     })
   //     .then(() => alert("게시글이 저장되었습니다."))
@@ -210,7 +210,7 @@ const BoardDetail = () => {
     }
 
     axios
-      .post(`http://localhost:8080/api/board/${boardId}/save`, null, {
+      .post(`http://13.124.41.118:8080/api/board/${boardId}/save`, null, {
         withCredentials: true,
       })
       .then(() => {
@@ -228,7 +228,7 @@ const BoardDetail = () => {
 
   // 2) DELETE 요청 보내기 (쿠키 기반 인증이면 withCredentials 추가)
   axios
-    .delete(`http://localhost:8080/api/board/delete/${boardId}`, {
+    .delete(`http://13.124.41.118:8080/api/board/delete/${boardId}`, {
       withCredentials: true,
     })
     .then(() => {
@@ -271,7 +271,7 @@ const BoardDetail = () => {
           className="main-image"
         />*/
         <img
-          src={`http://localhost:8080${pics[0].boardPicUrl}`}
+          src={`http://13.124.41.118:8080${pics[0].boardPicUrl}`}
           alt="게시글 이미지"
           className="main-image"
           onError={(e) => {

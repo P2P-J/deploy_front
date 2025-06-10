@@ -54,7 +54,7 @@ export default function BoardWrite() {
   useEffect(() => {
     if (boardId && !existing) {
       axios
-        .get(`http://localhost:8080/api/board/detail/${boardId}`, {
+        .get(`http://13.124.41.118:8080/api/board/detail/${boardId}`, {
           withCredentials: true,
         })
         .then((res) => {
@@ -114,8 +114,8 @@ export default function BoardWrite() {
       selectedFiles.forEach((f) => formData.append("pics", f));
 
       const url = boardId
-        ? `http://localhost:8080/api/board/pics/update/${boardId}`
-        : `http://localhost:8080/api/board/pics/write`;
+        ? `http://13.124.41.118:8080/api/board/pics/update/${boardId}`
+        : `http://13.124.41.118:8080/api/board/pics/write`;
 
       const method = boardId ? "put" : "post";
 

@@ -15,7 +15,7 @@ const KakaoCallback = () => {
     if (code) {
       axios
         .post(
-          "http://localhost:8080/api/kakao/login",
+          "http://13.124.41.118:8080/api/kakao/login",
           { code },
           { withCredentials: true }
         )

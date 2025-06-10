@@ -14,7 +14,7 @@ export default function ImageSlider() {
 
   useEffect(() => {
     // API 연결 후 axios로 대체 예정
-    // axios.get("http://localhost:8080/api/boardpic")
+    // axios.get("http://13.124.41.118:8080/api/boardpic")
     //   .then((response) => setCards(response.data))
     //   .catch((error) => console.error("Error fetching images:", error));
 
@@ -204,7 +204,7 @@ export default function ImageSlider() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/board/list", { withCredentials: true })
+      .get("http://13.124.41.118:8080/api/board/list", { withCredentials: true })
       .then((res) => {
         console.log("▶ /api/board/list 응답 전체:", res.data);
         // res.data는 Board 객체들의 배열. 
@@ -225,10 +225,10 @@ export default function ImageSlider() {
         // ② 각 게시글마다 첫 번째 사진 URL만 뽑아서 cards 배열 생성
         //    board.boardPics[0].boardPicUrl 은 
         //    DB에 저장된 “/uploads/…” 형태의 상대경로일 수 있다.
-        //    따라서 반드시 “http://localhost:8080” 같은 서버 호스트를 붙여야 한다.
+        //    따라서 반드시 “http://13.124.41.118:8080” 같은 서버 호스트를 붙여야 한다.
         const items = boardsWithValidPics.map((board) => ({
           boardId: board.boardId,
-          url: `http://localhost:8080${board.boardPics[0].boardPicUrl}`,
+          url: `http://13.124.41.118:8080${board.boardPics[0].boardPicUrl}`,
         }));
 
 

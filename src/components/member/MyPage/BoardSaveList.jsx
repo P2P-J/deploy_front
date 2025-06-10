@@ -8,7 +8,7 @@ export default function BoardSaveList() {
 
     useEffect(() => {
         axios
-        .get("http://localhost:8080/api/board/my/saved", { withCredentials: true })
+        .get("http://13.124.41.118:8080/api/board/my/saved", { withCredentials: true })
         .then((res) => setSavedBoards(res.data))
         .catch((err) => console.error("저장한 글 로딩 실패:", err));
     }, []);
