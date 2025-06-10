@@ -81,11 +81,11 @@ export default MyPage;
 // MyPage.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import UpdateUser from '@/components/member/myPage/UpdateUser';
-import BoardList from '@/components/member/myPage/BoardList';
-import CommentList from '@/components/member/myPage/CommentList';
-import BoardSaveList from '@/components/member/myPage/BoardSaveList';
-import BoardLikeList from '@/components/member/myPage/BoardLikeList';
+import UpdateUser from '@/components/member/myPage/UpdateUser.jsx';
+import BoardList from '@/components/member/myPage/BoardList.jsx';
+import CommentList from '@/components/member/myPage/CommentList.jsx';
+import BoardSaveList from '@/components/member/myPage/BoardSaveList.jsx';
+import BoardLikeList from '@/components/member/myPage/BoardLikeList.jsx';
 import '@/components_css/member/myPage/MyPage.css';
 
 const tabTitles = {

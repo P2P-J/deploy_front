@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "@/components_css/member/myPage//CancelAccount.css";
+import "@/components_css/member/myPage/CancelAccount.css";
 
 export default function CancelAccount() {
   const navigate = useNavigate();

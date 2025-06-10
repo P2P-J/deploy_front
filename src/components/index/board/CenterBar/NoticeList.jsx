@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "@/components_css/index/board/centerBar/NoticeList.css";
+import "@/components_css/index/board/CenterBar/NoticeList.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 

@@ -193,7 +193,7 @@ export default function ImageSlider() {
 import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "@/components_css/index/board/centerBar/ImageSlider.css";
+import "@/components_css/index/board/CenterBar/ImageSlider.css";
 
 const SCROLL_AMOUNT = 300;
 

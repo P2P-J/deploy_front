@@ -1,9 +1,9 @@
 import React from "react";
 import "@/components_css/board/BoardPage.css";
-import NevigationMenu from "./board/NevigationBar/NevigationMenu";
-import LeftSideSet from "./board/LeftSideBar/LeftSideSet";
-import CenterSet from "./board/CenterBar/CenterSet";
-import RightSideSet from "./board/RightSideBar/RightSideSet";
+import NevigationMenu from "./board/NevigationBar/NevigationMenu.jsx";
+import LeftSideSet from "./board/LeftSideBar/LeftSideSet.jsx";
+import CenterSet from "./board/CenterBar/CenterSet.jsx";
+import RightSideSet from "./board/RightSideBar/RightSideSet.jsx";
 
 export default function HomePage() {
   return (
